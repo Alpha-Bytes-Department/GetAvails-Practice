@@ -84,7 +84,8 @@ export default function HomePageHero() {
     useEffect(() => {
         // Added type to event parameter
         const handleClickLocation = (e: MouseEvent) => {
-            if (refLocation.current && !refLocation.current.contains(e.target as Node)) setIsOpenLocation(false);
+            if (refLocation.current && !refLocation.current.contains(e.target as Node))
+                setIsOpenLocation(false);
         };
         document.addEventListener('mousedown', handleClickLocation);
         return () => document.removeEventListener('mousedown', handleClickLocation);
@@ -96,10 +97,12 @@ export default function HomePageHero() {
     return (
         <div className="mt-8 flex flex-col xl:flex-row gap-12">
             <div className="w-full xl:w-1/2">
-                <h1 className="font-medium font-IBM-plex-sans text-2xl lg:text-5xl">Smarter Talent Booking, All in One Place</h1>
-                <p className="text-[#6B7280] mt-6 text-xl">The all-in-one platform for agents, artists, venues, and buyers
-                    to searchArtist, book and grow - smarter and faster.</p>
-                <button className="bg-[#235789] text-[#FFFFFF] font-inter px-6 py-2 rounded-4xl flex gap-2 mt-6 cursor-pointer">
+                <h1 className="font-medium font-IBM-plex-sans text-2xl lg:text-5xl">Smarter Talent Booking,
+                    All in One Place</h1>
+                <p className="text-[#6B7280] mt-6 text-xl">The all-in-one platform for agents,
+                    artists, venues, and buyers to searchArtist, book and grow - smarter and faster.</p>
+                <button className="bg-[#235789] text-[#FFFFFF] font-inter px-6 py-2 rounded-4xl 
+                flex gap-2 mt-6 cursor-pointer">
                     Join Now
                     <FaArrowRightLong className="translate-y-1/3" />
                 </button>
@@ -109,8 +112,9 @@ export default function HomePageHero() {
                     {/* searchArtist for Artists */}
                     <div ref={refArtist} className="relative w-full">
                         <button onClick={() => setIsOpenArtist(!isOpenArtist)}
-                            className="w-full bg-white rounded-full shadow hover:shadow-md transition-shadow px-6 py-4 
-                            flex items-center justify-between border-2 border-transparent hover:border-gray-200"
+                            className="w-full bg-white rounded-full shadow hover:shadow-md 
+                            transition-shadow px-6 py-4 flex items-center justify-between border-2 
+                            border-transparent hover:border-gray-200"
                         >
                             <div className="flex items-center gap-3">
                                 <Search className="w-5 h-5 text-gray-400" />
