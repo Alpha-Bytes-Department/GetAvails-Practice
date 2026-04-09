@@ -4,6 +4,7 @@ import SolutionsHero from "@/myComponents/Solutions/SolutionsHero";
 import { FaArrowRightLong, FaMessage } from "react-icons/fa6";
 import { IoLinkSharp } from "react-icons/io5";
 
+
 export default function Solutions() {
     return (
         <div className="px-6 sm:px-12 md:px-16 xl:px-28">
